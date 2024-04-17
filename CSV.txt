@@ -1,0 +1,22 @@
+import heygen
+import csv
+
+# CSVファイルのパス
+csv_path = "/path/to/your/csv.csv"
+
+# HeyGenの接続
+heygen = heygen.HeyGen()
+
+# CSVファイルの読み込み
+with open(csv_path, "r", encoding="utf-8") as f:
+    reader = csv.reader(f)
+    # ヘッダー行のスキップ
+    next(reader, None)
+    for row in reader:
+        name = row[0]
+
+        # 名前を個別に呼ぶ
+        heygen.speak(f"{name}さん、こんにちは！")
+
+# HeyGenの切断
+heygen.disconnect()
