@@ -2,7 +2,7 @@ import heygen
 import csv
 
 # CSVファイルのパス
-csv_path = "/path/to/your/csv.csv"
+csv_path = "names.csv"
 
 # HeyGenの接続
 heygen = heygen.HeyGen()
